@@ -17,20 +17,18 @@ function App() {
     return items[Math.floor(Math.random() * items.length)];
   };
 
-  // useEffect(() => {
-  //   getFood();
-  // }, [chosenFood]);
-
   return (
-    <div className="App">
-      <main className="App-header">
-        <p>What should I eat?</p>
-        <Food food={chosenFood}></Food>
-        <Button onClick={getFood} variant="primary">
-          Click Me!
-        </Button>
-      </main>
-    </div>
+    <>
+      <div className="App">
+        <main className="App-header">
+          <p>What should I eat?</p>
+          <Food food={chosenFood}></Food>
+          <Button onClick={getFood} variant="primary">
+            Click Me!
+          </Button>
+        </main>
+      </div>
+    </>
   );
 }
 
