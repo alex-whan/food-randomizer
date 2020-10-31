@@ -1,78 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Food from './Food';
 import Button from 'react-bootstrap/Button';
+import foodArr from './data';
 
 function App() {
-  const [allFoods, setAllFoods] = useState([
-    'indian',
-    'pizza',
-    'sandwich',
-    'italian',
-    'sushi',
-    'korean',
-    'mexican',
-    'mediterranean',
-    'asian',
-    'burgers',
-    'thai',
-    'chinese',
-    'chicken',
-    'greek',
-    'vietnamese',
-    'ramen',
-    'bbq',
-    'wings',
-    'comfort food',
-    'japanese bbq',
-    'middle eastern',
-    'breakfast and brunch',
-    'vegetarian',
-    'seafood',
-    'ethiopian',
-    'taiwanese',
-    'north indian',
-    'fish and chips',
-    'hawaiian',
-    'american',
-    'latin american',
-    'soul food',
-    'southern',
-    'diner',
-    'dumplings',
-    'persian',
-    'caribbean',
-    'spanish',
-    'cuban',
-    'russian',
-    'african',
-    'portuguese',
-    'moroccan',
-    'venezuelan',
-    'indonesian',
-    'cajun',
-    'nepalese',
-    'polish',
-    'jewish',
-    'laotian',
-    'eastern european',
-  ]);
-  const [chosenFood, setChosenFood] = useState('');
+  const [allFoods, setAllFoods] = useState(foodArr);
+  const [chosenFood, setChosenFood] = useState('Click below.');
 
   const getFood = () => {
-    console.log(randomize(allFoods));
+    let result = randomize(allFoods);
+    setChosenFood(result);
     console.log('Clicked. Chosen food is: ', chosenFood);
-
-    return <Food props={chosenFood}></Food>;
   };
 
   const randomize = items => {
     return items[Math.floor(Math.random() * items.length)];
   };
 
+  // useEffect(() => {
+  //   getFood();
+  // }, [chosenFood]);
+
   return (
     <div className="App">
       <main className="App-header">
         <p>What should I eat?</p>
+        <Food food={chosenFood}></Food>
         <Button onClick={getFood} variant="primary">
           Click Me!
         </Button>
