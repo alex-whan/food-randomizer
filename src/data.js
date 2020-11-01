@@ -18,7 +18,6 @@ const foodArr = [
   'bbq',
   'wings',
   'comfort food',
-  'japanese bbq',
   'middle eastern',
   'breakfast and brunch',
   'vegetarian',
