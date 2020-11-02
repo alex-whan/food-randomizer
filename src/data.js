@@ -19,7 +19,7 @@ const foodArr = [
   'wings',
   'comfort food',
   'middle eastern',
-  'breakfast and brunch',
+  'breakfast',
   'vegetarian',
   'seafood',
   'ethiopian',
