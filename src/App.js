@@ -25,7 +25,7 @@ function App() {
           <p>What should I eat?</p>
           <Food food={chosenFood}></Food>
           <Button
-            style={{ margin: '10px' }}
+            style={{ margin: '20px' }}
             onClick={getFood}
             variant="primary"
           >
