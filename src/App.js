@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Food from './Food';
 import Button from 'react-bootstrap/Button';
 import foodArr from './data';
@@ -11,7 +11,7 @@ function App() {
   const getFood = () => {
     let result = randomize(allFoods);
     setChosenFood(result);
-    console.log('Clicked. Chosen food is: ', chosenFood);
+    console.log('Chosen food is: ', chosenFood);
   };
 
   const randomize = items => {
