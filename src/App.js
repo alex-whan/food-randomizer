@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Food from './Food';
+import Footer from './Footer';
 import Button from 'react-bootstrap/Button';
 import foodArr from './data';
 import './app.scss';
@@ -32,6 +33,7 @@ function App() {
             Click Me!
           </Button>
         </main>
+        <Footer />
       </div>
     </>
   );
