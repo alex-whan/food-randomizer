@@ -7,7 +7,7 @@ import './app.scss';
 
 function App() {
   const [allFoods, setAllFoods] = useState(foodArr);
-  const [chosenFood, setChosenFood] = useState('Click below.');
+  const [chosenFood, setChosenFood] = useState('Click below for food.');
 
   const getFood = () => {
     let result = randomize(allFoods);
